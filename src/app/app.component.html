@@ -54,10 +54,10 @@
       <ul>
         <div *ngIf="isArray(myArray)"></div>
         <li *ngFor="let arrElement of myArray">
-          <div *ngIf="!isArray(arrElement) else ngTemplate"><a href="#"> {{ arrElement }}</a></div>
+          <div *ngIf="!isArray(arrElement) else ngTemplate"><i class="fa fa-folder-open-o" aria-hidden="true"></i><a href="#"> {{ arrElement }}</a></div>
           <ng-template #ngTemplate>
             <ul>
-              <li *ngFor="let subElement of arrElement"><a href="#"> {{subElement}} </a></li>
+              <li *ngFor="let subElement of arrElement"><i class="fa fa-file-code-o" aria-hidden="true"> </i> <a href="#"> {{subElement}}</a></li>
             </ul>
           </ng-template>
         </li>
